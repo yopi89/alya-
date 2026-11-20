@@ -24,7 +24,7 @@
 }
 
 body {
-  font-family: 'Poppins', 'Comic Sans MS', 'Chalkboard SE', cursive, sans-serif;
+  font-family: 'Poppins', 'Segoe UI', Arial, sans-serif;
   background-color: var(--pastel-bg);
   background-image: 
     radial-gradient(#ffccd5 1.5px, transparent 1.5px),
@@ -270,17 +270,18 @@ body {
 }
 
 .hero-rainbow-title {
-  font-size: clamp(2rem, 6vw, 3.4rem);
+  font-size: clamp(1.8rem, 8vw, 3.4rem);
   font-weight: 900;
   letter-spacing: -0.5px;
-  line-height: 1.2;
+  line-height: 1.15;
   margin: 15px 0 20px 0;
   background: linear-gradient(90deg, #ff1744, #ff9100, #ffd600, #00e676, #00b0ff, #d500f9, #ff1744);
   background-size: 300% 300%;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: rainbow-bg 6s ease infinite;
-  text-shadow: 0 4px 20px rgba(255, 107, 157, 0.4);
+  word-break: keep-all;
+  overflow-wrap: break-word;
 }
 
 .hero-subtitle {
