@@ -26,7 +26,7 @@
       </p>
       <div class="gate-actions">
         <button id="btn-enter-party" class="btn-primary-fun">
-          IYA GUA ALYA! 😼✨
+          IYA AKU ALYA! 😼✨
         </button>
         <button id="btn-not-alya" class="btn-secondary-fun">
           Bukan Alya 🏃‍♂️
@@ -44,11 +44,6 @@
       <span>Alya's Birthday</span>
     </div>
     <div class="nav-controls">
-      <label for="custom-music-input" class="audio-toggle-btn" style="background:#b3e5fc; cursor:pointer;"
-        title="Pilih lagu sendiri (.mp3)">
-        📁 <span>Pilih MP3</span>
-        <input type="file" id="custom-music-input" accept="audio/*" style="display:none;">
-      </label>
       <button id="audio-toggle" class="audio-toggle-btn">
         <div class="audio-bars">
           <span></span><span></span><span></span>
@@ -58,8 +53,8 @@
     </div>
   </header>
 
-  <!-- Hidden Audio Element for Custom MP3 -->
-  <audio id="bgm-audio" loop></audio>
+  <!-- Audio BGM: Semua Akan Dirayakan - Nadin Amizah -->
+  <audio id="bgm-audio" src="assets/bgm.mp3" loop preload="auto"></audio>
 
   <!-- BUNTING GARLAND -->
   <div class="bunting-garland">
@@ -128,31 +123,34 @@
         <div class="soundboard-title">
           <span>🎵 PAPAN BUNYI ABSURD</span>
         </div>
-        <p style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:12px;">Pencet tombolnya, langit pun menyala! 🔊</p>
+        <p style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:12px;">Pencet, terus denger sendiri 🔊</p>
         <div class="soundboard-buttons">
           <button class="btn-meme-sound" data-sound="meow">
-            <span class="btn-emoji">😺</span>
-            <span class="btn-label">MEOW!</span>
+            <span class="btn-emoji">😺</span><span class="btn-label">MEOW!</span>
           </button>
           <button class="btn-meme-sound" data-sound="huh">
-            <span class="btn-emoji">🐱</span>
-            <span class="btn-label">HUH?!</span>
+            <span class="btn-emoji">🐱</span><span class="btn-label">HUH?!</span>
           </button>
           <button class="btn-meme-sound" data-sound="yippee">
-            <span class="btn-emoji">🎉</span>
-            <span class="btn-label">YIPPEE!</span>
+            <span class="btn-emoji">🎉</span><span class="btn-label">YIPPEE!</span>
           </button>
-          <button class="btn-meme-sound" data-sound="chipi">
-            <span class="btn-emoji">🕺</span>
-            <span class="btn-label">CHIPI CHIPI</span>
+          <button class="btn-meme-sound" data-sound="oiia">
+            <span class="btn-emoji">🌀</span><span class="btn-label">OIIA OIIA~</span>
           </button>
-          <button class="btn-meme-sound" data-sound="batman">
-            <span class="btn-emoji">🦇</span>
-            <span class="btn-label">BATMAN!</span>
+          <button class="btn-meme-sound" data-sound="catlauth">
+            <span class="btn-emoji">😹</span><span class="btn-label">NGAKAK~</span>
           </button>
           <button class="btn-meme-sound" data-sound="boing">
-            <span class="btn-emoji">🌀</span>
-            <span class="btn-label">BOING!</span>
+            <span class="btn-emoji">💨</span><span class="btn-label">BOING!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="barkfart">
+            <span class="btn-emoji">🐶</span><span class="btn-label">BRRT!! 💀</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="yaallah">
+            <span class="btn-emoji">😱</span><span class="btn-label">YA ALLAH!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="yapapa">
+            <span class="btn-emoji">🎵</span><span class="btn-label">YAPAPA~</span>
           </button>
         </div>
       </div>
@@ -331,31 +329,24 @@
       </div>
       <h3 class="batman-headline">"I AM BATMAN."</h3>
       <div class="batman-letter-body">
-        <p>Malam ini, seluruh penjahat di kota Gotham gua suruh libur dulu. Joker, Riddler, sama Penguin udah gua suruh
-          anteng di Arkham Asylum.</p>
+        <p>Malam ini Gotham lagi aman, jadi Batman izin ngirim pesan sebentar.</p>
         <br>
-        <p>Kenapa? Karena Batmobile malam ini resmi gua parkir dulu khusus demi ngirim pesan penting ini buat orang
-          paling spesial:</p>
+        <p>Ga banyak yang perlu aku bilang sebenarnya, tapi ini hari ulang tahun kamu, jadi aku usahain:</p>
         <br>
-        <h4 style="color:#ffd54f; font-size:1.25rem; text-align:center; margin:12px 0;">✨ HAPPY BIRTHDAY, ALYA
-          NOVELIANA! 🎂✨</h4>
-        <p>Gotham City mungkin butuh Batman buat ngejaga kotanya, tapi Batman cuma butuh liat kamu senyum dan bahagia
-          terus.</p>
+        <h4 style="color:#ffd54f; font-size:1.25rem; text-align:center; margin:12px 0;">HAPPY BIRTHDAY, ALYA. 🎂</h4>
+        <p>Selamat nambah umur. Semoga tahun ini lebih ringan dari sebelumnya — rezekinya, urusannya, dan hatinya.</p>
         <br>
-        <p>Ingat kata Batman:<br>
+        <p>Kata Batman:<br>
           <i>"It's not who I am underneath, but what I do that defines me."</i><br>
-          Dan apa yang gua lakuin malam ini adalah memastikan hari ulang tahun kamu jadi hari yang paling berkesan,
-          seru, dan menyenangkan!
+          Dan yang aku lakuin malam ini adalah maksa diri buka laptop dan nulis ini buat kamu. Jadi ya, hargain lah sedikit.
         </p>
         <br>
-        <p>Kalo kamu butuh bantuan, butuh teman cerita, butuh teman jalan, atau ada hal yang bikin kamu kesel... Ga
-          perlu repot nyalain Bat-Signal di langit. Cukup panggil gua, Batman kamu bakal langsung meluncur! 🏎️💨</p>
+        <p>Kalau lagi ada yang berat, ga perlu nyalain Bat-Signal. Langsung aja kabarin. Batman bakal ada kok — tapi jangan jam 3 pagi ya, Batman juga butuh tidur. 🏎️</p>
         <br>
-        <p style="font-weight:800; color:#4fc3f7; text-align:center;">Stay safe, stay pretty, and happy birthday, Alya.
-        </p>
+        <p style="font-weight:800; color:#4fc3f7; text-align:center;">Happy birthday, Alya. Jaga diri baik-baik.</p>
       </div>
       <div class="batman-footer-sign">
-        — Dari Batman kamu 🦇🖤
+        — Batman (yang terpaksa jadi sotoy nulis surat) 🦇
       </div>
     </div>
   </div>
@@ -393,10 +384,10 @@
       <div class="cert-name">ALYA NOVELIANA 👑</div>
 
       <p class="cert-desc">
-        Atas prestasinya: Berhasil nambah umur dengan luar biasa, tetap mempesona dan berparas cantik, selalu ceria dan
-        jadi orang baik yang dicintai sekelilingnya.<br><br>
-        <i>"Status: Orang Paling Spesial & Favorit di Semesta Alam 💖⭐<br>(Semoga hari-hari kamu selalu dipenuhi tawa
-          dan kebahagiaan!)"</i>
+        Atas prestasinya: Nambah umur dengan elegan, kerja keras sambil belajar bahasa Jepang mandiri,
+        dan membuktikan bahwa mimpi kerja di Jepang bukan cuma angan-angan.<br><br>
+        <i>"Status: Calon Anak Jepang Paling Cantik di Semesta 🗾💖<br>
+        (Ganbare, Alya — kamu udah lebih deket dari yang kamu kira.)"</i>
       </p>
 
       <div class="cert-seal">🏅</div>
@@ -421,41 +412,23 @@
   </footer>
 
   <!-- =========================================================
-       14. PEEKING CORNER CATS (floating interactive corner ornaments)
+       14. PEEKING CORNER CATS
   ========================================================== -->
-  <!-- Left Corner: Vibing Cat -->
   <div id="peeking-cat-left" class="peeking-cat peeking-left" title="Klik si kucing!">
     <div id="peeking-bubble-left" class="peeking-bubble"></div>
     <div class="peeking-emoji">🐱</div>
   </div>
 
-  <!-- Right Corner: Banana Cat -->
   <div id="peeking-cat-right" class="peeking-cat peeking-right" title="Klik si pisang cat!">
     <div id="peeking-bubble-right" class="peeking-bubble"></div>
     <div class="peeking-emoji">🍌🐱</div>
   </div>
 
-  <!-- =========================================================
-       15. DESKTOP MARGIN STICKER BADGES
-  ========================================================== -->
-  <div class="margin-decor-left" aria-hidden="true">
-    <div class="side-meme-badge">🐱 <span>Oiia Cat~</span></div>
-    <div class="side-meme-badge">😺 <span>Maxwell Cat</span></div>
-    <div class="side-meme-badge">🦇 <span>Batman Mode</span></div>
-    <div class="side-meme-badge">💯 <span>100% Imut</span></div>
-  </div>
-  <div class="margin-decor-right" aria-hidden="true">
-    <div class="side-meme-badge">🎂 <span>HABEDE!</span></div>
-    <div class="side-meme-badge">🍌 <span>Banana Cat</span></div>
-    <div class="side-meme-badge">🐾 <span>Pawsome!</span></div>
-    <div class="side-meme-badge">✨ <span>Alya Spesial</span></div>
-  </div>
-
-  <!-- Scripts -->
-  <script src="js/audio.js"></script>
-  <script src="js/popcat.js"></script>
-  <script src="js/gallery.js"></script>
-  <script src="js/interactive.js"></script>
+  <!-- Scripts (v=4 for cache-busting) -->
+  <script src="js/audio.js?v=4"></script>
+  <script src="js/popcat.js?v=4"></script>
+  <script src="js/gallery.js?v=4"></script>
+  <script src="js/interactive.js?v=4"></script>
 </body>
 
 </html>

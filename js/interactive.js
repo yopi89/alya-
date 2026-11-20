@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 2. Gate Unlock ("IYA GUA ALYA!")
+  // 2. Gate Unlock ("IYA AKU ALYA!")
   const enterBtn = document.getElementById('btn-enter-party');
   const gateOverlay = document.getElementById('gate-overlay');
   if (enterBtn && gateOverlay) {
@@ -67,24 +67,6 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 
-  // 4. Custom MP3 File Loader
-  const musicFileInput = document.getElementById('custom-music-input');
-  if (musicFileInput) {
-    musicFileInput.addEventListener('change', (e) => {
-      const file = e.target.files[0];
-      if (file) {
-        const audioEl = document.getElementById('bgm-audio');
-        if (audioEl) {
-          audioEl.src = URL.createObjectURL(file);
-          audioEl.load();
-          if (window.soundMaster) {
-            window.soundMaster.stopBirthdaySong();
-            window.soundMaster.startBirthdaySong();
-          }
-        }
-      }
-    });
-  }
 
   // 5. Candle Blowing
   const candleFlame = document.getElementById('candle-flame');
@@ -183,13 +165,13 @@ document.addEventListener('DOMContentLoaded', () => {
   const fortuneResult = document.getElementById('fortune-text');
 
   const FORTUNES = [
-    "✨ Ramalan Hari Ini: Kamu beruntung banget punya orang yang sengaja bikinin web lucu ini khusus buat kamu wkwk!",
-    "🍲 Ramalan Rezeki: Dalam waktu dekat kamu bakal dapet traktiran makanan enak tanpa dipungut biaya!",
-    "🚀 Ramalan Masa Depan: Semua target, impian, dan cita-cita kamu bakal tercapai dengan mulus tanpa hambatan!",
-    "💖 Ramalan Hati: Hari ini kamu dilindungi dari segala bentuk overthinking, badmood, dan hal-hal yang bikin pusing!",
-    "😺 Ramalan Kucing: Kamu resmi dinobatkan jadi Ratu Kucing Paling Asik se-Indonesia Raya!",
-    "💰 Ramalan Finansial: Saldo ATM kamu bakal se-gendut perut kucing oren abis makan whiskas!",
-    "⭐ Ramalan Aura: Auranya glowing maksimal 1000%, matahari aja auto sungkem!"
+    "😺 Kucing semesta bilang: hari ini kamu bakal ga sengaja bikin orang salting cuma karena noleh.",
+    "🍜 Ramalan rezeki: seseorang lagi nahan diri buat ga nraktir kamu terus karena takut keliatan obvious.",
+    "🗾 Ramalan Jepang: tahun ini progress bahasa Jepang kamu naik drastis — dan Jepang udah nunggu kamu.",
+    "💖 Ramalan hati: orang yang sering kepikiran kamu itu ada kok. Deket juga. Tapi ga akan ngaku dulu.",
+    "😼 Ramalan absurd: kamu hari ini terlalu distracting, tolong dikurangin sedikit, ganggu konsentrasi.",
+    "💰 Ramalan finansial: kerjaan kamu bakal makin stabil — dan tiket ke Jepang itu makin masuk akal.",
+    "⭐ Ramalan terakhir: semua baik-baik aja. Kalau belum, ntar juga baik-baik aja. Percaya aja dulu."
   ];
 
   if (fortuneBtn && fortuneResult) {
@@ -225,28 +207,34 @@ document.addEventListener('DOMContentLoaded', () => {
 function initMemeSoundboard() {
   const buttons = document.querySelectorAll('.btn-meme-sound');
   buttons.forEach(btn => {
-    btn.addEventListener('click', (e) => {
-      const soundType = btn.getAttribute('data-sound');
+    btn.addEventListener('click', () => {
+      const sound = btn.getAttribute('data-sound');
       if (window.soundMaster) {
-        if (soundType === 'meow') window.soundMaster.playMeow();
-        else if (soundType === 'huh') window.soundMaster.playHuh();
-        else if (soundType === 'yippee') window.soundMaster.playYippee();
-        else if (soundType === 'chipi') window.soundMaster.playChipi();
-        else if (soundType === 'batman') window.soundMaster.playBatmanTheme();
-        else if (soundType === 'boing') window.soundMaster.playBoing();
+        window.soundMaster.init();
+        switch(sound) {
+          case 'meow':     window.soundMaster.playMeow(); break;
+          case 'huh':      window.soundMaster.playHuh(); break;
+          case 'yippee':   window.soundMaster.playYippee(); break;
+          case 'oiia':     window.soundMaster.playOiia(); break;
+          case 'catlauth': window.soundMaster.playCatLaugh(); break;
+          case 'boing':    window.soundMaster.playBoing(); break;
+          case 'barkfart': window.soundMaster.playBarkFart(); break;
+          case 'yaallah':  window.soundMaster.playYaAllah(); break;
+          case 'yapapa':   window.soundMaster.playYapapa(); break;
+        }
       }
 
-      // Spawn burst of emojis from button
+      // Emoji burst from button
       const rect = btn.getBoundingClientRect();
       const emoji = btn.querySelector('.btn-emoji') ? btn.querySelector('.btn-emoji').textContent : '✨';
-      for (let i = 0; i < 4; i++) {
+      for (let i = 0; i < 5; i++) {
         const p = document.createElement('div');
         p.className = 'cursor-paw-sparkle';
         p.textContent = emoji;
-        p.style.left = `${rect.left + rect.width / 2 + (Math.random() - 0.5) * 50}px`;
-        p.style.top = `${rect.top - 10 + (Math.random() - 0.5) * 20}px`;
+        p.style.left = `${rect.left + rect.width / 2 + (Math.random() - 0.5) * 60}px`;
+        p.style.top  = `${rect.top - 10 + (Math.random() - 0.5) * 20}px`;
         document.body.appendChild(p);
-        setTimeout(() => p.remove(), 800);
+        setTimeout(() => p.remove(), 900);
       }
     });
   });
@@ -335,25 +323,26 @@ function initTypewriter() {
   const textEl = document.getElementById('typewriter-text');
   if (!textEl) return;
 
-  const fullLetter = `Woi Alya! 🎂✨
+  const fullLetter = `Alya. 🎂
 
-Selamat ulang tahun ya! 🎉
-Cieee nambah umur lagi nih, makin dewasa tapi untungnya makin manis dan makin cakep juga wkwk.
+Selamat ulang tahun ya.
+Nambah umur lagi, selamat.
 
-Gua sengaja bikinin web meme kucing absurd ini spesial buat kamu, biar hari ultah kamu makin seru, rame, dan kamu bisa senyum-senyum sendiri pas buka ini! 🐱✨
+Jujur, aku ga terlalu jago nulis yang puitisan. Jadi ini tulisannya apa adanya aja.
 
-Di hari spesial kamu ini, doa gua tulus banget buat kamu:
-🐾 Semoga kamu selalu sehat, panjang umur, dan bahagia terus setiap hari.
-🌸 Semua urusan kamu, kuliah, karir, dan masa depan kamu dimudahkan dan dilancarkan.
-💖 Rezeki kamu melimpah ruah biar bisa jajan enak terus.
-🍰 Dijauhin dari hal-hal yang bikin overthinking, dan selalu dikelilingi orang-orang baik yang tulus sayang sama kamu.
-✨ Semoga apapun impian, cita-cita, dan doa terbaik kamu di tahun ini bisa terwujud satu per satu!
+Aku bikinin web absurd kucing meme ini buat kamu — bukan karena ga ada kerjaan, tapi emang mau. Karena kamu layak dapet sesuatu yang bikin kamu senyum sendiri waktu buka ini.
 
-Makasih ya udah selalu jadi orang yang asik, manis, dan baik banget selama ini.
-Tetep jadi Alya yang ceria, gokil, dan jangan pernah ngerasa sendirian. Kalo kamu butuh teman cerita, teman curhat, atau teman jalan, kamu tau harus nyari siapa kan? 😎
+Doanya simple aja:
+🐾 Semoga tahun ini lebih enak dari tahun sebelumnya.
+🌸 Kerjaannya lancar, Jepangnya makin jago, dan mimpi kerja di sana makin deket.
+💖 Sehat terus, rezeki cukup, dan ga banyak overthinking.
+✨ Dan semoga dikelilingi orang-orang yang beneran ada buat kamu, bukan cuma waktu enak-enaknya aja.
 
-Sekali lagi, Happy Birthday ya Alya! 🥳👑
-- Dari orang yang selalu siap ada buat kamu 🐾💖`;
+Makasih udah jadi orang yang asik dan ga ribet. Beneran.
+Kalau lagi ada yang berat, inget masih ada yang bisa diajak cerita kok.
+
+Selamat ulang tahun lagi, Alya.
+- Dari backburner — Yovi 🐾`;
 
   let i = 0;
   let timer = null;

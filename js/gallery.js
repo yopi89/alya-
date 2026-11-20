@@ -1,118 +1,128 @@
-// Galeri Foto Lengkap Alya (19 Foto Bersih HD - Termasuk 6 Foto Crop HD)
+// Galeri Foto Alya — diurutkan per kategori folder
 const ALYA_PHOTOS = [
+
+  // ── AESTHETIC (5 foto) ───────────────────────────────────
   {
-    file: "656080569_17930138475213268_3389488791301076831_n.webp",
-    caption: "Alya mode anggun nan kalem (padahal aslinya lawak dan asik parah wkwk) 💅",
-    sticker: "🐱",
+    file: "aesthetic/656080569_17930138475213268_3389488791301076831_n.webp",
+    caption: "Kamu cantik bahkan dari belakang. Wajar sih.",
+    sticker: "🌊",
     tag: "Aesthetic"
   },
   {
-    file: "660007799_17930138466213268_497163415395743804_n.webp",
-    caption: "Tatapannya mengandung 99% pesona dan 1% rencana ngejailin orang 😼",
+    file: "aesthetic/660007799_17930138466213268_497163415395743804_n.webp",
+    caption: "Pantai yang bagus. Tapi bukan itu yang aku lihat pertama.",
     sticker: "✨",
-    tag: "Kece"
-  },
-  {
-    file: "774826034_17951661828213268_4787564003356196853_n.webp",
-    caption: "Cakep bener kamu di sini, kucing oren aja auto minder 🙇‍♂️",
-    sticker: "🐾",
-    tag: "Cute"
-  },
-  {
-    file: "775245324_17951661810213268_4719874831984001455_n.webp",
-    caption: "Senyum manis yang selalu sukses bikin hari-hari jadi cerah dan adem ✨💖",
-    sticker: "🌸",
-    tag: "Sweet"
-  },
-  {
-    file: "776685965_17951559288213268_6067713652071585814_n.webp",
-    caption: "Vibes model majalah internasional lewat dulu bos senggol dong 🚶‍♀️💫",
-    sticker: "👑",
-    tag: "Favorit"
-  },
-  {
-    file: "777396768_17951661903213268_9044189592767086780_n.webp",
-    caption: "Visualnya emang ga main-main sih ini, fix no debat no kecap 🌌",
-    sticker: "⭐",
     tag: "Aesthetic"
   },
   {
-    file: "777899022_17951559279213268_5881571492266534553_n.webp",
-    caption: "Manis alami 100% tanpa bahan pemanis buatan 🍯",
-    sticker: "🍓",
-    tag: "Sweet"
+    file: "aesthetic/777899022_17951559279213268_5881571492266534553_n.webp",
+    caption: "Cantiknya di foto ini ga perlu diceritain.",
+    sticker: "🖤",
+    tag: "Aesthetic"
   },
   {
-    file: "777899028_17951559345213268_7430731507049656157_n.webp",
-    caption: "Pose candid aesthetic 10/10, keren banget fotonya 📸",
+    file: "aesthetic/777899028_17951559345213268_7430731507049656157_n.webp",
+    caption: "Ini foto yang bikin orang scroll balik lagi.",
     sticker: "🎀",
-    tag: "Cute"
+    tag: "Aesthetic"
   },
   {
-    file: "780139888_17951559306213268_8925029962629450559_n.webp",
-    caption: "Aura glowing-nya ngalahin lampu sorot stadion bola 🌟",
+    file: "aesthetic/780422099_17951559324213268_6887325728555561911_n.webp",
+    caption: "Santai aja, tapi tetap yang paling menarik di frame.",
     sticker: "🌷",
     tag: "Aesthetic"
   },
+
+  // ── CUTE (3 foto) ────────────────────────────────────────
   {
-    file: "780255788_17951661780213268_2306010668180685044_n.webp",
-    caption: "Foto mode ratu ultah terkece abad ini! 🎂✨",
-    sticker: "🧁",
-    tag: "Favorit"
-  },
-  {
-    file: "780422099_17951559324213268_6887325728555561911_n.webp",
-    caption: "Punya teman se-kece kamu tuh selalu bikin bangga dan senyum-senyum sendiri wkwk 🕶️💖",
-    sticker: "🎉",
-    tag: "Kece"
-  },
-  {
-    file: "799525572_17956638141213268_7631786848480396652_n.webp",
-    caption: "Gaya santai tapi damage cantiknya tetep nembus layar HP 💥",
+    file: "cute/799525572_17956638141213268_7631786848480396652_n.webp",
+    caption: "Kamu sampe jadi bunga sendiri. Masuk akal sih.",
     sticker: "🧸",
     tag: "Cute"
   },
   {
-    file: "818598468_17956638114213268_8850160955124446505_n.webp",
-    caption: "Alya Noveliana: Orang paling asik, paling unik, dan paling spesial 👑🎈",
+    file: "cute/818598468_17956638114213268_8850160955124446505_n.webp",
+    caption: "Versi dua dari yang sama. Dua-duanya bagus.",
+    sticker: "🎀",
+    tag: "Cute"
+  },
+  {
+    file: "cute/clean_alya_ss_4.jpg",
+    caption: "Tiga pose dan aku ga tau harus fokus yang mana.",
+    sticker: "👓",
+    tag: "Cute"
+  },
+
+  // ── FAVORIT (5 foto) ─────────────────────────────────────
+  {
+    file: "favorit/775245324_17951661810213268_4719874831984001455_n.webp",
+    caption: "Foto ini masuk favorit. Rasa kamu juga tau kenapa.",
     sticker: "💖",
     tag: "Favorit"
   },
   {
-    file: "clean_alya_ss_1.jpg",
-    caption: "Pose candid paling juara, estetiknya dapet banget 📸✨",
-    sticker: "🔮",
-    tag: "Aesthetic"
+    file: "favorit/776685965_17951559288213268_6067713652071585814_n.webp",
+    caption: "Tatapan kameranya itu... iya, aku notice.",
+    sticker: "🌺",
+    tag: "Favorit"
   },
   {
-    file: "clean_alya_ss_2.jpg",
-    caption: "Tatapannya bikin adem, visual berkelas internasional 💫",
+    file: "favorit/777396768_17951661903213268_9044189592767086780_n.webp",
+    caption: "Ga bisa dilewatin begitu aja. Udah coba, ga berhasil.",
+    sticker: "⭐",
+    tag: "Favorit"
+  },
+  {
+    file: "favorit/780139888_17951559306213268_8925029962629450559_n.webp",
+    caption: "Santai tapi entah kenapa susah dialihkan pandangannya.",
+    sticker: "✨",
+    tag: "Favorit"
+  },
+  {
+    file: "favorit/clean_alya_ss_6.jpg",
+    caption: "Ada bunga di foto ini. Tapi bukan itu yang lebih cantik.",
+    sticker: "🌟",
+    tag: "Favorit"
+  },
+
+  // ── KECE ABIS (4 foto) ───────────────────────────────────
+  {
+    file: "kece abis/774826034_17951661828213268_4787564003356196853_n.webp",
+    caption: "Confident level ini beda sendiri.",
     sticker: "🔥",
     tag: "Kece"
   },
   {
-    file: "clean_alya_ss_3.jpg",
-    caption: "Senyum tipis tapi efek manisnya dahsyat tiada tanding 🌸",
-    sticker: "💖",
-    tag: "Sweet"
-  },
-  {
-    file: "clean_alya_ss_4.jpg",
-    caption: "Pesona ratu ulang tahun emang beda auranya, anggun maksimal 👑💖",
-    sticker: "👼",
-    tag: "Favorit"
-  },
-  {
-    file: "clean_alya_ss_5.jpg",
-    caption: "Gaya outfit kece badai, selalu cocok pake apa aja 👗✨",
-    sticker: "⚡",
+    file: "kece abis/780255788_17951661780213268_2306010668180685044_n.webp",
+    caption: "Pose males tapi keliatan bagus. Itu susah dilakuin.",
+    sticker: "🌊",
     tag: "Kece"
   },
   {
-    file: "clean_alya_ss_6.jpg",
-    caption: "Cantik, ceria, dan selalu sukses bikin hari orang lain berwarna 🌷🎈",
-    sticker: "🌟",
-    tag: "Cute"
+    file: "kece abis/clean_alya_ss_1.jpg",
+    caption: "Vibe foto ini ga perlu caption tambahan.",
+    sticker: "🖤",
+    tag: "Kece"
+  },
+  {
+    file: "kece abis/clean_alya_ss_5.jpg",
+    caption: "Tiga pose, semuanya sama kecenya. Konsisten.",
+    sticker: "⚡",
+    tag: "Kece"
+  },
+
+  // ── SWEET (2 foto) ───────────────────────────────────────
+  {
+    file: "sweet/clean_alya_ss_2.jpg",
+    caption: "Santai di foto ini tapi cantiknya ga minta izin.",
+    sticker: "🍯",
+    tag: "Sweet"
+  },
+  {
+    file: "sweet/clean_alya_ss_3.jpg",
+    caption: "Closeup ini terlalu jelas. Dalam artian yang baik.",
+    sticker: "🌸",
+    tag: "Sweet"
   }
 ];
 
