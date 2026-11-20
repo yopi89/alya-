@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>🎂 Selamat Habede Alya Noveliana! 🐱✨</title>
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/meme_ornaments_patch.css">
+</head>
+
+<body>
+
+  <!-- =========================================================
+       1. THE GATE OVERLAY (WARNING & AUDIO UNLOCK)
+  ========================================================== -->
+  <div id="gate-overlay" class="gate-overlay">
+    <div class="gate-card">
+      <div class="gate-badge">⚠️ PERINGATAN RESMI ULANG TAHUN ⚠️</div>
+      <div class="gate-vibing-cat">🐱🎉</div>
+      <h1 class="gate-title">KHUSUS BUAT KAMU, ALYA!</h1>
+      <p class="gate-desc">
+        Website ini dibikin spesial buat kamu, biar hari ulang tahun kamu makin seru dan ga ngebosenin! 🐱✨<br><br>
+        Beneran kamu yang bernama <b>Alya Noveliana</b> sang ratu semesta alam?
+      </p>
+      <div class="gate-actions">
+        <button id="btn-enter-party" class="btn-primary-fun">
+          IYA GUA ALYA! 😼✨
+        </button>
+        <button id="btn-not-alya" class="btn-secondary-fun">
+          Bukan Alya 🏃‍♂️
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       2. TOP BAR & AUDIO CONTROLS
+  ========================================================== -->
+  <header class="top-nav">
+    <div class="nav-brand">
+      <span>🐱</span>
+      <span>Alya's Birthday</span>
+    </div>
+    <div class="nav-controls">
+      <label for="custom-music-input" class="audio-toggle-btn" style="background:#b3e5fc; cursor:pointer;"
+        title="Pilih lagu sendiri (.mp3)">
+        📁 <span>Pilih MP3</span>
+        <input type="file" id="custom-music-input" accept="audio/*" style="display:none;">
+      </label>
+      <button id="audio-toggle" class="audio-toggle-btn">
+        <div class="audio-bars">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="audio-label">Music 🎵</span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Hidden Audio Element for Custom MP3 -->
+  <audio id="bgm-audio" loop></audio>
+
+  <!-- BUNTING GARLAND -->
+  <div class="bunting-garland">
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+    <div class="flag"></div>
+  </div>
+
+  <main>
+    <!-- =========================================================
+         3. HERO SECTION (HABEDE CUPCAKE & CANDLE)
+    ========================================================== -->
+    <section class="hero-section">
+      <div style="display:flex; justify-content:center; align-items:center; gap:15px; margin-bottom:10px;">
+        <span style="font-size:2.5rem; display:inline-block; animation:cat-vibe 0.8s infinite ease-in-out;">🐱</span>
+        <span class="section-pill" style="margin:0;">SPESIAL HARI ULANG TAHUN KAMU</span>
+        <span style="font-size:2.5rem; display:inline-block; animation:spin-3d 3s infinite linear;">🎂</span>
+      </div>
+
+      <h1 class="hero-rainbow-title">
+        SELAMAT HABEDE TU YU<br>ALYA NOVELIANA! 🥳
+      </h1>
+
+      <div class="hero-subtitle">
+        🐾 Edisi Spesial Ulang Tahun Alya Noveliana 🐾
+      </div>
+
+      <!-- CUPCAKE CENTERPIECE (CLEANED VERSION: TU ALYA, NO TIKTOK UI) -->
+      <div class="cupcake-stage">
+        <!-- Interactive Candle Flame -->
+        <div class="candle-container" title="Klik lilin untuk meniup!">
+          <div id="candle-flame" class="flame"></div>
+          <div id="candle-smoke" class="smoke">💨</div>
+        </div>
+
+        <div class="cupcake-wrapper">
+          <img src="assets/meme_cupcake_clean.png" alt="Meme Kucing Cupcake Habede Tu Alya" class="cupcake-img">
+        </div>
+
+        <div class="candle-controls">
+          <button id="btn-blow-candle" class="btn-blow">
+            💨 Klik Untuk Tiup Lilin!
+          </button>
+        </div>
+
+        <div id="candle-wishes-box" class="candle-wishes-box">
+          🎉 YAYYY! LILIN BERHASIL DITIUP! 🕯️✨<br>
+          Semoga semua impian & doa terbaik kamu di tahun ini terkabul, selalu sehat, banyak rezeki, dan makin bahagia
+          terus! AMIIIN! 🤲💖
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         3.5 MEME SOUNDBOARD
+    ========================================================== -->
+    <section class="soundboard-section">
+      <div class="soundboard-card">
+        <div class="soundboard-title">
+          <span>🎵 PAPAN BUNYI ABSURD</span>
+        </div>
+        <p style="font-size:0.85rem; color:var(--text-muted); font-weight:600; margin-bottom:12px;">Pencet tombolnya, langit pun menyala! 🔊</p>
+        <div class="soundboard-buttons">
+          <button class="btn-meme-sound" data-sound="meow">
+            <span class="btn-emoji">😺</span>
+            <span class="btn-label">MEOW!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="huh">
+            <span class="btn-emoji">🐱</span>
+            <span class="btn-label">HUH?!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="yippee">
+            <span class="btn-emoji">🎉</span>
+            <span class="btn-label">YIPPEE!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="chipi">
+            <span class="btn-emoji">🕺</span>
+            <span class="btn-label">CHIPI CHIPI</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="batman">
+            <span class="btn-emoji">🦇</span>
+            <span class="btn-label">BATMAN!</span>
+          </button>
+          <button class="btn-meme-sound" data-sound="boing">
+            <span class="btn-emoji">🌀</span>
+            <span class="btn-label">BOING!</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         4. POPCAT CLICKER MINI-GAME
+    ========================================================== -->
+    <section class="popcat-section">
+      <div class="popcat-arena">
+        <span class="section-pill">MINI GAME INTERAKTIF</span>
+        <h2 class="popcat-title">POPCAT ALYA EDITION 🐱</h2>
+        <p class="popcat-subtitle">Klik atau tekan Spacebar secepat mungkin buat ngeramein hari ulang tahun kamu!</p>
+
+        <div class="popcat-score-box">
+          <div>
+            <div style="font-size:0.75rem; font-weight:800; color:var(--text-muted); text-transform:uppercase;">Total
+              Pop</div>
+            <div id="popcat-count" class="popcat-number">0</div>
+          </div>
+          <div id="popcat-cps" class="popcat-cps">0 CPS</div>
+        </div>
+
+        <!-- POPCAT SVG CHARACTER -->
+        <div id="popcat-character" class="popcat-character closed" title="Klik aku!">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="40,90 20,25 75,55" fill="#f5ede3" stroke="#2d3436" stroke-width="4"
+              stroke-linejoin="round" />
+            <polygon points="38,80 28,38 65,58" fill="#ffb4a2" />
+
+            <polygon points="160,90 180,25 125,55" fill="#f5ede3" stroke="#2d3436" stroke-width="4"
+              stroke-linejoin="round" />
+            <polygon points="162,80 172,38 135,58" fill="#ffb4a2" />
+
+            <ellipse cx="100" cy="115" rx="72" ry="60" fill="#f5ede3" stroke="#2d3436" stroke-width="4" />
+
+            <circle cx="70" cy="98" r="13" fill="#2d3436" />
+            <circle cx="67" cy="94" r="4.5" fill="#ffffff" />
+
+            <circle cx="130" cy="98" r="13" fill="#2d3436" />
+            <circle cx="127" cy="94" r="4.5" fill="#ffffff" />
+
+            <polygon points="96,112 104,112 100,118" fill="#ff80ab" />
+
+            <g class="mouth-closed">
+              <path d="M90,120 Q100,126 100,120 Q100,126 110,120" fill="none" stroke="#2d3436" stroke-width="4"
+                stroke-linecap="round" />
+            </g>
+
+            <g class="mouth-open">
+              <ellipse cx="100" cy="138" rx="26" ry="24" fill="#2d3436" />
+              <ellipse cx="100" cy="142" rx="19" ry="16" fill="#880e4f" />
+              <path d="M88,146 Q100,138 112,146 Q100,158 88,146" fill="#ff4081" />
+            </g>
+          </svg>
+        </div>
+
+        <div id="popcat-badge" class="popcat-badge">
+          Klik Popcat untuk mulai! 👆
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         5. POLAROID PHOTO GALLERY (19 PHOTOS OF ALYA)
+    ========================================================== -->
+    <section class="gallery-section">
+      <div class="gallery-header">
+        <span class="section-pill">SPECIAL GALLERY</span>
+        <h2 class="gallery-title">📸 Galeri Foto Alya Paling Kece</h2>
+        <p style="color:var(--text-muted); font-weight:600; margin-top:5px;">
+          Koleksi foto terbaik dan tercantik kamu! ✨ (klik foto untuk perbesar)
+        </p>
+
+        <div class="filter-bar">
+          <button class="filter-tab active" data-tag="All">Semua Foto (19)</button>
+          <button class="filter-tab" data-tag="Favorit">💖 Favorit</button>
+          <button class="filter-tab" data-tag="Aesthetic">✨ Aesthetic</button>
+          <button class="filter-tab" data-tag="Cute">🐾 Cute</button>
+          <button class="filter-tab" data-tag="Kece">🔥 Kece Abis</button>
+          <button class="filter-tab" data-tag="Sweet">🍯 Sweet</button>
+        </div>
+      </div>
+
+      <!-- Polaroid Cards Grid -->
+      <div id="polaroid-grid" class="polaroid-grid"></div>
+    </section>
+
+    <!-- =========================================================
+         6. BATMAN SPECIAL TRANSMISSION SECTION
+    ========================================================== -->
+    <section class="batman-section">
+      <div class="batman-card">
+        <div class="bat-badge">🦇 TOP SECRET TRANSMISSION FROM GOTHAM 🦇</div>
+        <div class="bat-signal-icon">🦇</div>
+        <h2 class="batman-title">PESAN KHUSUS DARI BATMAN</h2>
+        <p class="batman-subtitle">Malam ini Batman izin libur jaga kota Gotham khusus demi Alya...</p>
+
+        <button id="btn-activate-batsignal" class="btn-batman">
+          🚨 NYALAKAN BAT-SIGNAL! 🦇
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         7. SURPRISE GIFT BOX
+    ========================================================== -->
+    <section class="gift-section">
+      <div class="gift-card">
+        <span class="section-pill">KADO MISTERIUS</span>
+        <h2 style="font-size:1.8rem; font-weight:900; margin:10px 0;">Ada Kado Buat Kamu! 🎁</h2>
+        <p style="color:var(--text-muted); font-weight:600;">Pencet kotaknya sekarang untuk membukanya!</p>
+
+        <div id="gift-box" class="gift-box-anim" title="Klik untuk buka kado!">
+          🎁
+        </div>
+        <div>
+          <span style="font-size:0.9rem; font-weight:800; color:#e91e63;">👆 Klik Kotak Kado Di Atas</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         8. CAT FORTUNE TELLER
+    ========================================================== -->
+    <section class="fortune-section">
+      <div class="fortune-card">
+        <span class="section-pill">RAMALAN ABSURD</span>
+        <h2 style="font-size:1.8rem; font-weight:900; margin:10px 0;">🔮 Ramalan Spesial Ulang Tahun Kamu</h2>
+        <p style="color:var(--text-muted); font-weight:600;">Lihat apa kata semesta dan para kucing tentang hari ini!
+        </p>
+
+        <div class="fortune-crystal">🔮</div>
+
+        <div class="fortune-box">
+          <div id="fortune-text" class="fortune-text">
+            Tekan tombol di bawah untuk mengungkap takdir hari ini! ✨
+          </div>
+        </div>
+
+        <button id="btn-get-fortune" class="btn-primary-fun" style="background:#ce93d8; font-size:1rem;">
+          🎲 Buka Ramalan Kucing Hari Ini!
+        </button>
+      </div>
+    </section>
+
+    <!-- =========================================================
+         9. TYPEWRITER BIRTHDAY LETTER
+    ========================================================== -->
+    <section class="letter-section">
+      <div class="letter-stationery">
+        <div class="letter-seal-top">💌 SURAT SPESIAL BUAT KAMU</div>
+        <div id="typewriter-text" class="typewriter-content"></div>
+        <div class="letter-footer-btns">
+          <button id="btn-replay-letter" class="btn-blow" style="background:#673ab7;">
+            🔄 Ketik Ulang Surat
+          </button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- =========================================================
+       10. BATMAN SECRET TRANSMISSION MODAL
+  ========================================================== -->
+  <div id="batman-modal" class="batman-modal">
+    <div class="batman-terminal-card">
+      <button id="close-batman-modal" class="close-cert-btn"
+        style="position:absolute; top:12px; right:15px; margin:0; padding:6px 14px;">✕</button>
+      <div class="batman-terminal-header">
+        <span style="font-size:1.2rem;">🦇</span>
+        <span>WAYNE ENTERPRISES // ENCRYPTED GOTHAM LINK</span>
+      </div>
+      <div class="batman-avatar">
+        <div class="bat-mask-emoji">🦇🖤</div>
+      </div>
+      <h3 class="batman-headline">"I AM BATMAN."</h3>
+      <div class="batman-letter-body">
+        <p>Malam ini, seluruh penjahat di kota Gotham gua suruh libur dulu. Joker, Riddler, sama Penguin udah gua suruh
+          anteng di Arkham Asylum.</p>
+        <br>
+        <p>Kenapa? Karena Batmobile malam ini resmi gua parkir dulu khusus demi ngirim pesan penting ini buat orang
+          paling spesial:</p>
+        <br>
+        <h4 style="color:#ffd54f; font-size:1.25rem; text-align:center; margin:12px 0;">✨ HAPPY BIRTHDAY, ALYA
+          NOVELIANA! 🎂✨</h4>
+        <p>Gotham City mungkin butuh Batman buat ngejaga kotanya, tapi Batman cuma butuh liat kamu senyum dan bahagia
+          terus.</p>
+        <br>
+        <p>Ingat kata Batman:<br>
+          <i>"It's not who I am underneath, but what I do that defines me."</i><br>
+          Dan apa yang gua lakuin malam ini adalah memastikan hari ulang tahun kamu jadi hari yang paling berkesan,
+          seru, dan menyenangkan!
+        </p>
+        <br>
+        <p>Kalo kamu butuh bantuan, butuh teman cerita, butuh teman jalan, atau ada hal yang bikin kamu kesel... Ga
+          perlu repot nyalain Bat-Signal di langit. Cukup panggil gua, Batman kamu bakal langsung meluncur! 🏎️💨</p>
+        <br>
+        <p style="font-weight:800; color:#4fc3f7; text-align:center;">Stay safe, stay pretty, and happy birthday, Alya.
+        </p>
+      </div>
+      <div class="batman-footer-sign">
+        — Dari Batman kamu 🦇🖤
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       11. LIGHTBOX MODAL (PHOTO PREVIEW)
+  ========================================================== -->
+  <div id="gallery-lightbox" class="lightbox">
+    <div class="lightbox-content">
+      <button id="lb-close" class="lightbox-close">&times;</button>
+      <button id="lb-prev" class="lightbox-btn lightbox-prev">&#10094;</button>
+      <button id="lb-next" class="lightbox-btn lightbox-next">&#10095;</button>
+
+      <div class="lightbox-img-wrapper">
+        <img id="lb-img" src="" alt="Alya Noveliana Preview">
+      </div>
+
+      <div class="lightbox-caption-bar">
+        <div id="lb-caption" class="lightbox-caption"></div>
+        <div id="lb-counter" class="lightbox-counter"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       12. OFFICIAL CERTIFICATE MODAL
+  ========================================================== -->
+  <div id="gift-modal" class="gift-modal">
+    <div class="certificate-card">
+      <div class="cert-header">⭐ SERTIFIKAT PENGHARGAAN RESMI ⭐</div>
+      <div class="cert-title">DEWAN PERKUCINGAN DUNIA</div>
+      <p style="font-size:0.85rem; color:#8d6e63; margin-bottom:10px;">Dengan bangga menganugerahkan gelar kehormatan
+        kepada:</p>
+
+      <div class="cert-name">ALYA NOVELIANA 👑</div>
+
+      <p class="cert-desc">
+        Atas prestasinya: Berhasil nambah umur dengan luar biasa, tetap mempesona dan berparas cantik, selalu ceria dan
+        jadi orang baik yang dicintai sekelilingnya.<br><br>
+        <i>"Status: Orang Paling Spesial & Favorit di Semesta Alam 💖⭐<br>(Semoga hari-hari kamu selalu dipenuhi tawa
+          dan kebahagiaan!)"</i>
+      </p>
+
+      <div class="cert-seal">🏅</div>
+      <br>
+      <button id="close-gift-modal" class="close-cert-btn">
+        Simpan Penghargaan & Tutup ✨
+      </button>
+    </div>
+  </div>
+
+  <!-- =========================================================
+       13. FOOTER
+  ========================================================== -->
+  <footer class="site-footer">
+    <div class="footer-cats">🐱 🎂 🦇 😻 🎈 🐾</div>
+    <div class="footer-text">
+      Made with 💖 & Lots of Meows khusus buat <b>Alya Noveliana</b>
+    </div>
+    <div class="footer-sub">
+      © 2026 Pasukan Kucing Absurd & Wayne Enterprises. All Rights Reserved.
+    </div>
+  </footer>
+
+  <!-- =========================================================
+       14. PEEKING CORNER CATS (floating interactive corner ornaments)
+  ========================================================== -->
+  <!-- Left Corner: Vibing Cat -->
+  <div id="peeking-cat-left" class="peeking-cat peeking-left" title="Klik si kucing!">
+    <div id="peeking-bubble-left" class="peeking-bubble"></div>
+    <div class="peeking-emoji">🐱</div>
+  </div>
+
+  <!-- Right Corner: Banana Cat -->
+  <div id="peeking-cat-right" class="peeking-cat peeking-right" title="Klik si pisang cat!">
+    <div id="peeking-bubble-right" class="peeking-bubble"></div>
+    <div class="peeking-emoji">🍌🐱</div>
+  </div>
+
+  <!-- =========================================================
+       15. DESKTOP MARGIN STICKER BADGES
+  ========================================================== -->
+  <div class="margin-decor-left" aria-hidden="true">
+    <div class="side-meme-badge">🐱 <span>Oiia Cat~</span></div>
+    <div class="side-meme-badge">😺 <span>Maxwell Cat</span></div>
+    <div class="side-meme-badge">🦇 <span>Batman Mode</span></div>
+    <div class="side-meme-badge">💯 <span>100% Imut</span></div>
+  </div>
+  <div class="margin-decor-right" aria-hidden="true">
+    <div class="side-meme-badge">🎂 <span>HABEDE!</span></div>
+    <div class="side-meme-badge">🍌 <span>Banana Cat</span></div>
+    <div class="side-meme-badge">🐾 <span>Pawsome!</span></div>
+    <div class="side-meme-badge">✨ <span>Alya Spesial</span></div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/audio.js"></script>
+  <script src="js/popcat.js"></script>
+  <script src="js/gallery.js"></script>
+  <script src="js/interactive.js"></script>
+</body>
+
+</html>
